@@ -1,0 +1,8 @@
+body{
+    background-color: #a83b08de;
+    
+}
+.box{  /* this can call the class */
+    text-align: center;
+}
+
