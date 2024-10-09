@@ -47,10 +47,10 @@
 }
 /* Main styles */
 body {
-  margin-top: 0px;
+  margin-top: -10px;
   color: #2a1f5a;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  text-align: center;
+  font: 100 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: left;
   /* img size is 50x50 */
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
@@ -71,4 +71,71 @@ body::before {
     font-size: 10rem;
     font-weight: 100;
     font-style: normal;
+    margin: 30;
+    padding: 0;
+    white-space: nowrap;
   }
+
+
+  .MainpageBtn {
+    position: absolute;
+    left: 95px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none;
+    width: 160px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: transparent 40%;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: -50px
+
+
+    
+    
+  }
+  .MainpageBtn:active {
+    left: 80px;
+    box-shadow: rgb(87, 71, 90) 0px 30px 60px -12px inset,
+      rgb(73, 43, 43) 0px 18px 36px -18px inset;
+      
+  }
+  
+
+
+  .MainpageBtn2 {
+    position: absolute;
+    left: 70px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none;
+    width: 60px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: transparent 40%;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin: -50px
+
+
+    
+    
+  }
+  .MainpageBtn2:active {
+    left: 65px;
+    box-shadow: rgb(87, 71, 90) 0px 30px 60px -12px inset,
+      rgb(73, 43, 43) 0px 18px 36px -18px inset;
+      
+  }
+  
