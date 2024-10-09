@@ -47,7 +47,7 @@
 }
 /* Main styles */
 body {
-  margin-top: -10px;
+    padding-top: 30px;
   color: #2a1f5a;
   font: 100 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: left;
@@ -66,20 +66,25 @@ body {
   -o-animation-timing-function: linear;
   animation-timing-function:linear;
 }
-body::before {
-    content: "Nullink";
-    font-size: 10rem;
-    font-weight: 100;
-    font-style: normal;
-    margin: 30;
-    padding: 0;
-    white-space: nowrap;
-  }
 
+
+#Logodiv{
+    font: 10 160px/0 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    
+}
+
+#Logodiv sub{
+    font-size: 40px;
+    font-weight: 1000;
+    color: rgb(70, 70, 83);
+}
 
   .MainpageBtn {
-    position: absolute;
-    left: 95px;
+
+    position:absolute;
+    left: 80px;
+    
+    
     cursor: pointer;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -94,7 +99,7 @@ body::before {
     background-color: transparent 40%;
     border-radius: 20px;
     transition: all 0.3s ease;
-    margin: -50px
+    
 
 
     
@@ -110,8 +115,7 @@ body::before {
 
 
   .MainpageBtn2 {
-    position: absolute;
-    left: 70px;
+    position: fixed;
     cursor: pointer;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
@@ -126,16 +130,61 @@ body::before {
     background-color: transparent 40%;
     border-radius: 20px;
     transition: all 0.3s ease;
-    margin: -50px
+
 
 
     
     
   }
   .MainpageBtn2:active {
-    left: 65px;
+    
+    box-shadow: rgb(87, 71, 90) 0px 30px 60px -12px inset,
+      rgb(73, 43, 43) 0px 18px 36px -18px inset;
+      
+      
+  }
+  
+
+
+.MainpageBtn3 {
+    position:absolute;
+    left: 280px;
+    
+
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border: none;
+    width: 160px;
+    height: 50px;
+    color: rgb(255, 255, 255);
+    background-color: transparent 40%;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    
+
+
+    
+    
+  }
+  .MainpageBtn3:active {
+   
     box-shadow: rgb(87, 71, 90) 0px 30px 60px -12px inset,
       rgb(73, 43, 43) 0px 18px 36px -18px inset;
       
   }
-  
+
+
+#Lajos{
+    gap: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    position: absolute;
+    top: 20%;
+}
