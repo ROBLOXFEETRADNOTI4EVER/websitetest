@@ -357,3 +357,34 @@ body {
 .confetti:nth-child(even) {
   background-color: #4caf50;
 }
+
+#h11 {
+  text-align: center;
+  font-size: 5vw; /* Responsive font size based on viewport width */
+  font-optical-sizing: auto; /* Ensure optical sizing is enabled */
+  background: linear-gradient(90deg, #706f7291, #6f0df09a); /* Gradient background */
+  color: white; /* Text color */
+  padding: 20px; /* Add some padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Optional hover effect */
+#h11:hover {
+  transform: translateY(-5px); /* Lift the element slightly on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) { /* For tablets and smaller devices */
+  #h11 {
+      font-size: 4vw; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) { /* For mobile devices */
+  #h11 {
+      font-size: 6vw; /* Slightly larger size for better readability on mobile */
+  }
+}
