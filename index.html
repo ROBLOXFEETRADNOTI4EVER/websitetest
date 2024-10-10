@@ -4,16 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nullink®</title>
-    
-    <link href="css.css" rel="stylesheet" type="text/css" />
-    <link href="css.css" rel="stylesheet" type="text/css" />
-    <link href="css.css" rel="stylesheet" type="text/css" />
-    <link href="css/mobile.css" media="(max-width: 500px)" rel="stylesheet"  type="text/css" />
-    <link href="/css.css" media="(min-width: 500px)" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css.css"> <!-- Link to the external CSS file -->
-    <link type="text/css" media='(max-width: 500px)' rel="stylesheet" href="css/mobile.css" />
+    <script>
+        // Function to trigger the Easter egg
+        function triggerEasterEgg() {
+            const logo = document.querySelector("#Logodiv img");
+      
+            // Spin the logo
+            logo.classList.add("spin");
+      
+            // Create confetti elements
+            for (let i = 0; i < 1000; i++) {
+                const confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                document.body.appendChild(confetti);
+      
+                // Random positioning
+                confetti.style.left = Math.random() * 1000 + "vw";
+                confetti.style.top = Math.random() * 1000 + "vh";
+            }
+      
+            // Remove confetti and stop spin after a short time (3 seconds)
+            setTimeout(() => {
+                logo.classList.remove("spin");
+      
+                const confettiElements = document.querySelectorAll(".confetti");
+                confettiElements.forEach(confetti => {
+                    confetti.remove();
+                });
+            }, 3000);
+        }
+      
+        // Attach the function to the logo click event
+        document.addEventListener("DOMContentLoaded", function() {
+            const logo = document.querySelector("#Logodiv img");
+            logo.addEventListener("click", triggerEasterEgg);
+        });
+      </script>
+      
+    <script>
+        let dropdownOpen = false;
+      
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            const dropdownBtn = document.querySelector(".MainpageBtn2 img");
+      
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+      
+            if (!dropdownOpen) {
+                dropdownBtn.classList.remove("rotate-right");
+                dropdownBtn.classList.add("rotate-left");
+            } else {
+                dropdownBtn.classList.remove("rotate-left");
+                dropdownBtn.classList.add("rotate-right");
+            }
+      
+            dropdownOpen = !dropdownOpen;
+        }
+      
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownMenu");
+            const dropdownBtn = document.querySelector(".MainpageBtn2 img");
+            const dropdownContainer = document.querySelector(".dropdown");
+      
+            if (dropdownOpen && !dropdownContainer.contains(event.target)) {
+                dropdown.style.display = "none";
+                dropdownBtn.classList.remove("rotate-left");
+                dropdownBtn.classList.add("rotate-right");
+                dropdownOpen = false;
+            }
+        });
+      
+        function loadPage(page) {
+            window.location.href = page;
+        }
+      
+        // Easter egg function for logo click
+        function triggerEasterEgg() {
+            const logo = document.querySelector("#Logodiv img");
+      
+            // Spin the logo
+            logo.classList.add("spin");
+      
+            // Create confetti elements
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                document.body.appendChild(confetti);
+      
+                // Random positioning
+                confetti.style.left = Math.random() * 100 + "vw";
+                confetti.style.top = Math.random() * 100 + "vh";
+            }
+      
+            // Remove confetti and stop spin after a short time (3 seconds)
+            setTimeout(() => {
+                logo.classList.remove("spin");
+      
+                const confettiElements = document.querySelectorAll(".confetti");
+                confettiElements.forEach(confetti => {
+                    confetti.remove();
+                });
+            }, 3000);
+        }
+      
+        // Attach the function to the logo click event
+        document.querySelector("#Logodiv img").addEventListener("click", triggerEasterEgg);
+      </script>
 </head>
-<body">
+<body>
 
 <div id="Logodiv">
     <img src="images/logo.png" width="100" height="100" draggable="false"
@@ -34,13 +133,27 @@
 
 
         <div class="dropdown">
-        <button class="MainpageBtn2">
-            <img src="images/dropdown.png" width="30" draggable="false">
-        </button>    
+            <button class="MainpageBtn2" onclick="toggleDropdown()">
+                <img src="images/dropdown.png" width="30" draggable="false">
+            </button>
         </div>
-</div>
-<a  href="https://github.com/ROBLOXFEETRADNOTI4EVER/"><button class="vighbtn"> IloveVighFerenc</button></a>
-
-
-</body>
-</html>
+    
+        <!-- Dropdown Menu -->
+        <div id="dropdownMenu" style="display:none;">
+            <ul class="dropdown-list">
+                <li onclick="loadPage('page1.html')">About us</li>
+                <li onclick="loadPage('page2.html')">Faq</li>
+                <li onclick="loadPage('page3.html')">Why Nullink®?</li>
+                <li onclick="loadPage('page4.html')">SitesI need</li>
+                <li onclick="loadPage('page5.html')">Page 5</li>
+                <li onclick="loadPage('page6.html')">Page 6</li>
+            </ul>
+        </div>
+    </div>
+    
+    <a href="https://github.com/ROBLOXFEETRADNOTI4EVER/">
+        <button class="vighbtn">IloveVighFerenc</button>
+    </a>
+    
+    </body>
+    </html>
