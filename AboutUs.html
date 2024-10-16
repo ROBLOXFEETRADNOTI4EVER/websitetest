@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css"> <!-- Link to the external CSS file -->
+    <script>
+        let dropdownOpen = false;
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            const dropdownBtn = document.querySelector(".MainpageBtn2 img");
+
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+
+            if (!dropdownOpen) {
+                dropdownBtn.classList.remove("rotate-right");
+                dropdownBtn.classList.add("rotate-left");
+            } else {
+                dropdownBtn.classList.remove("rotate-left");
+                dropdownBtn.classList.add("rotate-right");
+            }
+
+            dropdownOpen = !dropdownOpen;
+        }
+
+        document.addEventListener("click", function(event) {
+            const dropdown = document.getElementById("dropdownMenu");
+            const dropdownBtn = document.querySelector(".MainpageBtn2 img");
+            const dropdownContainer = document.querySelector(".dropdown");
+
+            if (dropdownOpen && !dropdownContainer.contains(event.target)) {
+                dropdown.style.display = "none";
+                dropdownBtn.classList.remove("rotate-left");
+                dropdownBtn.classList.add("rotate-right");
+                dropdownOpen = false;
+            }
+        });
+
+        function loadPage(page) {
+            // Here, you can use window.location to change the page
+            window.location.href = page; // This will redirect to the specified page
+        }
+    </script>
+</head>
+<body>
+    <div id="Logodiv">
+        <img src="images/logo.png" width="100" height="100" draggable="false"
+        <p draggable="false">Nullink<sub>©</sub></p>
+    </div>
+    
+    <div id="Lajos">
+        <button class="MainpageBtn" onclick="loadPage('index.html')"> <!-- Load index.html on click -->
+            <div class="textt">Home</div>
+        </button> 
+
+        <div class="dropdown">
+            <button class="MainpageBtn2" onclick="toggleDropdown()">
+                <img src="images/dropdown.png" width="30" draggable="false">
+            </button>
+        </div>
+        
+        <!-- Dropdown Menu -->
+        <div id="dropdownMenu" style="display:none;">
+            <ul class="dropdown-list">
+                <li onclick="loadPage('AboutUs.html')">About us</li>
+                <li onclick="loadPage('page1.html')">FAQ</li>
+                <li onclick="loadPage('page1.html')">Why Nullink®?</li>
+                <li onclick="loadPage('page1.html')">Shop</li>
+                <li onclick="loadPage('page1.html')">Suppport</li>
+                <li onclick="loadPage('page1.html')">Report-an-issue</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="FirstPar">
+        
+        <h1 id="firstparmid">What is nullink?</h1>
+         <b>Nullink is a secure platform for chatting. Nowdays you can't chat anyonymusly.<br>Privacy is a must when we talk about our data such as:  passsowrds; emails; usernames <br>
+         </b>
+         <h1>Why nullink?</h1>
+         <b>
+            We reccomend using nullink if you truly care about your privacy. <br>
+            We don't store any data longer then 24 hours and all data is hashed.<br>
+            We don't work with any law enforcment. We won't give your data to others.<br>
+         </b>
+
+         <h1>Nullink's mission </h1>
+            <b>
+                Nullink's mission is to creat a safer communication platform.<br>
+                Where users can share privat data withouth being in fier of their privacy.
+            </b>
+        
+
+</body>
+</html>
